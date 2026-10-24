@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Olawale Isreal Feranmi is a software developer in training sharing his JavaScript learning journey in public.">
+  <meta name="author" content="Olawale Isreal Feranmi">
+  <meta property="og:title" content="Olawale Isreal Feranmi | Software developer in training">
+  <meta property="og:description" content="Follow Olawale's software development learning journey in public.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/profile-photo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Olawale Isreal Feranmi">
+  <meta name="twitter:description" content="A software developer in training learning JavaScript in public.">
+  <link rel="canonical" href="https://example.com/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Olawale Isreal Feranmi | Software developer in training</title>
+</head>
+<body>
+  <!-- Change the site identity or navigation labels here. -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Olawale home">Olawale Isreal Feranmi</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a><a href="#journey">Journey</a><a href="#projects">Projects</a><a href="#follow">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Change the introduction and calls to action here. -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Welcome</p>
+        <h1 id="hero-title">Olawale Isreal Feranmi</h1>
+        <p class="hero-lede">Software developer in training, based in Nigeria. I am learning JavaScript, data structures and algorithms, and sharing my progress as I grow.</p>
+        <div class="button-row"><a class="button button-primary" href="#projects">View my projects</a><a class="button button-secondary" href="#follow">Get in touch</a></div>
+      </div>
+      <div class="photo-frame">
+        <div class="photo-label">Profile photo</div>
+        <div class="photo-wrap">
+          <img src="assets/profile-photo.jpg" width="480" height="560" loading="lazy" alt="Portrait of Olawale Isreal Feranmi" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+          <div class="initials-avatar" hidden aria-label="Initials avatar">OF</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Change the about copy and primary language here. -->
+      <section id="about" class="editor-section" aria-labelledby="about-title">
+        <div class="section-heading"><h2 id="about-title">About me</h2></div>
+        <div class="content-card"><p>I am learning software development in public from Nigeria, with JavaScript as my main language. This site is where I share the honest progress: what I study, what I build, and what I understand next.</p><p>My approach is simple: learn, build, document. I am working toward internships, entry-level roles, and collaborations where I can keep growing with other people who enjoy making things.</p><p class="stack-line"><strong>Main language:</strong> JavaScript</p></div>
+      </section>
+
+      <!-- Change milestone wording in js/data.js and the panel heading here. -->
+      <section id="journey" class="editor-section" aria-labelledby="journey-title">
+        <div class="section-heading"><h2 id="journey-title">My learning journey</h2></div>
+        <div class="timeline" id="timeline"></div>
+        <div class="learning-panel"><div class="panel-heading"><span>Currently learning</span><span class="status-dot">In progress</span></div><div id="program-progress" class="progress-list"></div></div>
+      </section>
+
+      <!-- Change learning entries in js/data.js. -->
+      <section id="log" class="editor-section" aria-labelledby="log-title">
+        <div class="section-heading"><h2 id="log-title">Learning log</h2></div>
+        <div id="learning-log" class="log-list"></div><button id="log-more" class="text-button" type="button" hidden>Show more</button>
+      </section>
+
+      <!-- Add projects in js/data.js; the grid fills automatically. -->
+      <section id="projects" class="editor-section" aria-labelledby="projects-title">
+        <div class="section-heading section-heading-with-actions"><div><h2 id="projects-title">My projects</h2></div><div id="project-filters" class="filters" aria-label="Filter projects"></div></div>
+        <div id="projects-grid" class="projects-grid"></div>
+      </section>
+
+      <!-- Change social links and the invitation copy in js/data.js. -->
+      <section id="follow" class="follow-panel editor-section" aria-labelledby="follow-title">
+        <div class="section-heading"><h2 id="follow-title">Reach out to me</h2></div>
+        <p>Follow along as I learn, build, and document software development. I would be happy to connect, hear from you, and explore collaborations.</p>
+        <div class="button-row social-links" id="social-links"></div>
+        <a class="button button-primary" href="mailto:11isrealolawale@gmail.com">Send me an email</a>
+      </section>
+    </div>
+  </main>
+  <!-- Change the footer tagline here. -->
+  <footer class="site-footer"><div class="container"><span>&copy; <span id="current-year"></span> Olawale Isreal Feranmi. All rights reserved.</span><a href="#follow">Reach out to me</a></div></footer>
+  <script src="js/data.js"></script><script src="js/main.js"></script>
+</body>
+</html>
