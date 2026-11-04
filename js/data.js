@@ -21,6 +21,28 @@ window.portfolioData = {
     email: "11isrealolawale@gmail.com"
   },
   projects: [
+    {
+      id: "daily-task-checker",
+      title: "Daily Task Checker",
+      summary: "A browser-based daily task checker for managing, completing, reordering, and saving personal daily tasks.",
+      status: "Live",
+      tech: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "localStorage",
+        "Service Worker API",
+        "Web App Manifest"
+      ],
+      liveUrl: "https://daily-task-checker-app.vercel.app/",
+      githubUrl: "https://github.com/Acedigitals/Daily-Task-Checker-App",
+      problem: "Provides a simple way to organize recurring daily tasks, track completion progress, and preserve task data in the user's browser.",
+      built: "Built a responsive, installable daily task checker with task management, progress tracking, customizable default tasks, local persistence, themes, timezone-aware daily resets, mobile reorder controls, offline support, and PWA installation support.",
+      decisions: "Used plain HTML, CSS, and JavaScript with localStorage instead of a backend. Used local calendar dates for daily resets, visibility checks for mobile background behavior, stable task IDs, and a network-first service-worker strategy for safer updates.",
+      learned: "Learned DOM manipulation, arrays of objects, event listeners, rendering functions, localStorage, date and timezone handling, responsive CSS, accessibility, service workers, offline caching, and PWA installation.",
+      differently: "Add backend synchronization, task editing, data export and import, custom accessible dialogs, automated browser tests, and potentially a more structured cache-versioning strategy.",
+      screenshots: []
+    },
     /*
     {
       id: "my-project",
