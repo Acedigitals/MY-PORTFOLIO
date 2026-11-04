@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://olawale-isreal-feranmi-portfolio-zeta.vercel.app/sitemap.xml
