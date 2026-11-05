@@ -60,8 +60,16 @@
     const id = new URLSearchParams(window.location.search).get("id");
     const project = data.projects.find((item) => item.id === id);
     if (!project) { target.innerHTML = `<div class="not-found content-card"><h1>Project not found</h1><p class="muted">That project case study does not exist yet.</p><a class="case-link" href="index.html#projects">Back to projects</a></div>`; return; }
+    const projectUrl = `https://olawale-isreal-feranmi-portfolio-zeta.vercel.app/project.html?id=${encodeURIComponent(project.id)}`;
     document.title = `${project.title} | Olawale Isreal Feranmi`;
     document.querySelector('meta[name="description"]').setAttribute("content", project.summary);
+    document.querySelector('link[rel="canonical"]').setAttribute("href", projectUrl);
+    document.querySelector('meta[property="og:title"]').setAttribute("content", `${project.title} | Olawale Isreal Feranmi`);
+    document.querySelector('meta[property="og:description"]').setAttribute("content", project.summary);
+    document.querySelector('meta[property="og:url"]').setAttribute("content", projectUrl);
+    document.querySelector('meta[name="twitter:title"]').setAttribute("content", `${project.title} | Olawale Isreal Feranmi`);
+    document.querySelector('meta[name="twitter:description"]').setAttribute("content", project.summary);
+    document.querySelector('meta[name="twitter:url"]').setAttribute("content", projectUrl);
     target.innerHTML = `<article class="case-study"><div class="section-heading"><h1>Project case study</h1></div><div class="case-header"><span class="status-badge">${escapeHtml(project.status)}</span><h1>${escapeHtml(project.title)}</h1><p class="case-summary">${escapeHtml(project.summary)}</p><div class="tags">${project.tech.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div><div class="button-row">${project.liveUrl ? `<a class="button button-primary" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ""}${project.githubUrl ? `<a class="button button-secondary" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noopener noreferrer">GitHub</a>` : ""}</div></div><div class="case-sections">${[["Problem", "problem"], ["What I built", "built"], ["Key decisions", "decisions"], ["What I learned", "learned"], ["What I would do differently", "differently"]].map(([heading, key]) => `<section><h2>${heading}</h2><p>${escapeHtml(project[key])}</p></section>`).join("")}</div>${project.screenshots && project.screenshots.length ? `<section class="gallery"><h2>Screenshots</h2><div>${project.screenshots.map((image) => `<img src="${escapeHtml(image)}" width="576" height="1280" loading="lazy" alt="${escapeHtml(project.title)} screenshot">`).join("")}</div></section>` : ""}</article>`;
   }
   document.addEventListener("DOMContentLoaded", () => {
