@@ -19,11 +19,18 @@ window.portfolioData = {
     { name: "localStorage" },
     { name: "Service Worker API" },
     { name: "Web App Manifest" },
+    { name: "Node.js" },
+    { name: "SQLite" },
+    { name: "REST API design" },
+    { name: "Automated testing" },
+    { name: "OpenAPI" },
     { name: "Data structures and algorithms", status: "learning" }
   ],
   learningLog: [
     { date: "September 2026", title: "Started DSA 2.0", note: "Beginning a focused study of data structures and algorithms." },
-    { date: "October 2026", title: "Joined TS Academy", note: "Starting a structured learning program and documenting the journey." }
+    { date: "October 2026", title: "Joined TS Academy", note: "Starting a structured learning program and documenting the journey." },
+    { date: "November 2026", title: "Shipped Daily Task Checker", note: "An offline-capable installable task app." },
+    { date: "November 2026", title: "Built the event ticketing API", note: "Core API, mock payments, SQLite persistence in progress." }
   ],
   social: {
     x: "https://x.com/AceTheSchema",
@@ -71,5 +78,20 @@ window.portfolioData = {
       screenshots: ["assets/project-screen.png"]
     }
     */
+    {
+      id: "event-ticketing-system",
+      title: "Event Ticketing System",
+      summary: "A Node.js REST API for creating and publishing events, searching, booking tickets, mock payments and cancelling unpaid bookings, with SQLite persistence and 26 automated tests.",
+      status: "In progress",
+      tech: ["Node.js", "SQLite", "REST API", "node:test", "OpenAPI"],
+      liveUrl: "",
+      githubUrl: "https://github.com/Acedigitals/MY-DSA-PROJECT",
+      problem: "",
+      built: "",
+      decisions: "",
+      learned: "",
+      differently: "",
+      screenshots: []
+    }
   ]
 };

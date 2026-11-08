@@ -16,7 +16,7 @@
   <meta name="twitter:url" content="https://olawale-isreal-feranmi-portfolio-zeta.vercel.app/">
   <meta name="twitter:image" content="https://olawale-isreal-feranmi-portfolio-zeta.vercel.app/assets/og-image.jpg">
   <link rel="canonical" href="https://olawale-isreal-feranmi-portfolio-zeta.vercel.app/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,6 +28,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <!-- Change the site identity or navigation labels here. -->
   <header class="site-header">
     <div class="container header-inner">
@@ -39,13 +40,13 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- Change the introduction and calls to action here. -->
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Welcome</p>
         <h1 id="hero-title">Olawale Isreal Feranmi<span class="cursor" aria-hidden="true">_</span></h1>
-        <p class="hero-lede">Software developer in training, based in Nigeria. I am learning JavaScript, data structures and algorithms, and sharing my progress as I grow.</p>
+        <p class="hero-lede">Software developer in training, based in Nigeria. I build with JavaScript and Node.js and share my progress in public. Recent work: an offline-capable task app and an event-ticketing REST API.</p>
         <p class="availability">Open to internships and entry-level roles</p>
         <div class="button-row"><a class="button button-primary" href="#projects">View my projects</a><a class="button button-secondary" href="#follow">Get in touch</a><a class="button button-secondary" href="https://x.com/AceTheSchema" target="_blank" rel="noopener noreferrer">Follow on X</a><a class="button button-secondary" href="assets/Olawale-Isreal-Feranmi-CV.pdf" download>Download CV</a></div>
         <div class="terminal-window hero-terminal" aria-label="Introduction terminal">
@@ -55,7 +56,7 @@
       </div>
       <div class="photo-frame">
         <div class="photo-wrap">
-          <img src="assets/profile-photo.jpg" width="1024" height="1280" loading="lazy" alt="Portrait of Olawale Isreal Feranmi" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+          <img src="assets/profile-photo.jpg" width="1024" height="1280" fetchpriority="high" alt="Portrait of Olawale Isreal Feranmi" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
           <div class="initials-avatar" hidden aria-label="Initials avatar">OF</div>
         </div>
       </div>
@@ -84,13 +85,13 @@
       <!-- Change learning entries in js/data.js. -->
       <section id="log" class="editor-section" aria-labelledby="log-title">
         <div class="section-heading"><span class="file-tab">log.txt</span><h2 id="log-title">Learning log</h2></div>
-        <div id="learning-log" class="log-list"><article class="log-entry"><time>October 2026</time><div><h3>Joined TS Academy</h3><p>Starting a structured learning program and documenting the journey.</p></div></article><article class="log-entry"><time>September 2026</time><div><h3>Started DSA 2.0</h3><p>Beginning a focused study of data structures and algorithms.</p></div></article></div><button id="log-more" class="text-button" type="button" hidden>Show more</button>
+        <div id="learning-log" class="log-list"><article class="log-entry"><time>November 2026</time><div><h3>Built the event ticketing API</h3><p>Core API, mock payments, SQLite persistence in progress.</p></div></article><article class="log-entry"><time>November 2026</time><div><h3>Shipped Daily Task Checker</h3><p>An offline-capable installable task app.</p></div></article><article class="log-entry"><time>October 2026</time><div><h3>Joined TS Academy</h3><p>Starting a structured learning program and documenting the journey.</p></div></article><article class="log-entry"><time>September 2026</time><div><h3>Started DSA 2.0</h3><p>Beginning a focused study of data structures and algorithms.</p></div></article></div><button id="log-more" class="text-button" type="button" hidden>Show more</button>
       </section>
 
       <!-- Add projects in js/data.js; the grid fills automatically. -->
       <section id="projects" class="editor-section" aria-labelledby="projects-title">
         <div class="section-heading section-heading-with-actions"><div><span class="file-tab">projects/</span><h2 id="projects-title">My projects</h2></div><div id="project-filters" class="filters" aria-label="Filter projects" hidden></div></div>
-        <div id="projects-grid" class="projects-grid"><article class="project-card"><div class="project-card-top"><span class="status-badge">Live</span><span class="project-index">01</span></div><img class="project-image" src="assets/task_manager_1.jpg" width="576" height="1280" loading="lazy" alt="Daily Task Checker project screenshot"><h3>Daily Task Checker</h3><p>A browser-based daily task checker for managing, completing, reordering, and saving personal daily tasks.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>localStorage</span><span>Service Worker API</span><span>Web App Manifest</span></div><div class="project-actions"><a class="button button-primary" href="https://daily-task-checker-app.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a><a class="button button-secondary" href="https://github.com/Acedigitals/Daily-Task-Checker-App" target="_blank" rel="noopener noreferrer">GitHub</a></div><a class="case-link" href="project.html?id=daily-task-checker">Read case study <span aria-hidden="true">-&gt;</span></a></article></div>
+        <div id="projects-grid" class="projects-grid"><article class="project-card"><div class="project-card-top"><span class="status-badge">Live</span><span class="project-index">01</span></div><img class="project-image" src="assets/task_manager_1.jpg" width="576" height="1280" loading="lazy" alt="Daily Task Checker project screenshot"><h3>Daily Task Checker</h3><p>A browser-based daily task checker for managing, completing, reordering, and saving personal daily tasks.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>localStorage</span><span>Service Worker API</span><span>Web App Manifest</span></div><div class="project-actions"><a class="button button-primary" href="https://daily-task-checker-app.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a><a class="button button-secondary" href="https://github.com/Acedigitals/Daily-Task-Checker-App" target="_blank" rel="noopener noreferrer">GitHub</a></div><a class="case-link" href="project.html?id=daily-task-checker">Read case study <span aria-hidden="true">-&gt;</span></a></article><article class="project-card"><div class="project-card-top"><span class="status-badge">In progress</span><span class="project-index">02</span></div><h3>Event Ticketing System</h3><p>A Node.js REST API for creating and publishing events, searching, booking tickets, mock payments and cancelling unpaid bookings, with SQLite persistence and 26 automated tests.</p><div class="tags"><span>Node.js</span><span>SQLite</span><span>REST API</span><span>node:test</span><span>OpenAPI</span></div><div class="project-actions"><a class="button button-secondary" href="https://github.com/Acedigitals/MY-DSA-PROJECT" target="_blank" rel="noopener noreferrer">GitHub</a></div><a class="case-link" href="project.html?id=event-ticketing-system">Read case study <span aria-hidden="true">-&gt;</span></a></article></div>
       </section>
 
       <!-- Change social links and the invitation copy in js/data.js. -->
@@ -105,14 +106,5 @@
   <!-- Change the footer tagline here. -->
   <footer class="site-footer"><div class="container"><span>&copy; <span id="current-year">2026</span> Olawale Isreal Feranmi. All rights reserved.</span><div class="footer-links"><a href="https://x.com/AceTheSchema" target="_blank" rel="noopener noreferrer">X</a><a href="https://ng.linkedin.com/in/isreal-olawale-a229403a8" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Acedigitals" target="_blank" rel="noopener noreferrer">GitHub</a></div></div></footer>
   <script src="js/data.js"></script><script src="js/main.js"></script>
-  <script>
-    if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      const analyticsScript = document.createElement("script");
-      analyticsScript.defer = true;
-      analyticsScript.src = "/_vercel/insights/script.js";
-      document.head.appendChild(analyticsScript);
-    }
-  </script>
 </body>
 </html>
