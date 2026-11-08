@@ -71,6 +71,7 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
 }
 .hero-lede { max-width: 620px; color: var(--muted); font-size: 1.15rem; }
+.availability { margin: 18px 0 0; color: var(--primary); font-weight: 600; }
 .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
 .button {
   display: inline-block;
@@ -172,6 +173,9 @@ a:hover { text-decoration: underline; }
 .content-card p { max-width: 760px; }
 .stack-line { padding-top: 10px; color: var(--primary); }
 .stack-line strong { color: var(--text); }
+.skills-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; margin: 0; padding: 0; list-style: none; }
+.skills-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.skills-list small { color: #ffc857; font: .75rem "JetBrains Mono", monospace; }
 .timeline { margin-left: 8px; padding: 5px 0; border-left: 1px solid var(--border); }
 .timeline-item { position: relative; padding: 0 0 26px 32px; }
 .timeline-item:before {
@@ -298,6 +302,7 @@ a:hover { text-decoration: underline; }
   .line-card { grid-template-columns: 38px 1fr; gap: 14px; }
   .about-section .line-gutter { display: none; }
   .about-section .line-card { display: block; }
+  .skills-list { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

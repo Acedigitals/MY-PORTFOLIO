@@ -23,6 +23,11 @@
     if (!target) return;
     target.innerHTML = data.programs.map((program) => { const result = progress(program); return `<div class="progress-item"><div class="progress-label"><strong>${escapeHtml(program.name)}</strong><span>${result.percent}% complete, ${result.daysLeft} days left</span></div><div class="progress-track" role="progressbar" aria-label="${escapeHtml(program.name)} progress" aria-valuenow="${result.percent}" aria-valuemin="0" aria-valuemax="100"><span style="width:${result.percent}%"></span></div></div>`; }).join("");
   }
+  function renderSkills() {
+    const target = $("#skills-list");
+    if (!target) return;
+    target.innerHTML = data.skills.map((skill) => `<li><span>${escapeHtml(skill.name)}</span>${skill.status ? `<small>${escapeHtml(skill.status)}</small>` : ""}</li>`).join("");
+  }
   function renderLog() {
     const target = $("#learning-log");
     if (!target) return;
@@ -73,7 +78,7 @@
     target.innerHTML = `<article class="case-study"><div class="section-heading"><h1>Project case study</h1></div><div class="case-header"><span class="status-badge">${escapeHtml(project.status)}</span><h1>${escapeHtml(project.title)}</h1><p class="case-summary">${escapeHtml(project.summary)}</p><div class="tags">${project.tech.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div><div class="button-row">${project.liveUrl ? `<a class="button button-primary" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ""}${project.githubUrl ? `<a class="button button-secondary" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noopener noreferrer">GitHub</a>` : ""}</div></div><div class="case-sections">${[["Problem", "problem"], ["What I built", "built"], ["Key decisions", "decisions"], ["What I learned", "learned"], ["What I would do differently", "differently"]].map(([heading, key]) => `<section><h2>${heading}</h2><p>${escapeHtml(project[key])}</p></section>`).join("")}</div>${project.screenshots && project.screenshots.length ? `<section class="gallery"><h2>Screenshots</h2><div>${project.screenshots.map((image) => `<img src="${escapeHtml(image)}" width="576" height="1280" loading="lazy" alt="${escapeHtml(project.title)} screenshot">`).join("")}</div></section>` : ""}</article>`;
   }
   document.addEventListener("DOMContentLoaded", () => {
-    renderTimeline(); renderProgress(); renderLog(); renderProjects(); renderSocial(); renderProjectPage();
+    renderTimeline(); renderProgress(); renderSkills(); renderLog(); renderProjects(); renderSocial(); renderProjectPage();
     const year = $("#current-year"); if (year) year.textContent = new Date().getFullYear();
     const more = $("#log-more"); if (more) more.addEventListener("click", () => { const log = $("#learning-log"); log.dataset.expanded = log.dataset.expanded !== "true"; renderLog(); });
     const filters = $("#project-filters"); if (filters) filters.addEventListener("click", (event) => { if (event.target.matches("[data-filter]")) renderProjects(event.target.dataset.filter); });

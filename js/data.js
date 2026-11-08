@@ -7,8 +7,19 @@ window.portfolioData = {
   milestones: [
     { date: "September 2026", text: "Started software development, joined DSA 2.0" },
     { date: "October 2026", text: "Joined TS Academy (runs until March 2027)" },
+    { date: "November 2026", text: "Shipped Daily Task Checker" },
     { date: "Today", text: "Learning in public and building my first projects" },
-    { date: "Next", text: "Ship my first project and write about it" }
+    { date: "Next", text: "Write the Daily Task Checker case study and start my next project" }
+  ],
+  skills: [
+    { name: "JavaScript" },
+    { name: "HTML" },
+    { name: "CSS" },
+    { name: "Git and GitHub" },
+    { name: "localStorage" },
+    { name: "Service Worker API" },
+    { name: "Web App Manifest" },
+    { name: "Data structures and algorithms", status: "learning" }
   ],
   learningLog: [
     { date: "September 2026", title: "Started DSA 2.0", note: "Beginning a focused study of data structures and algorithms." },
